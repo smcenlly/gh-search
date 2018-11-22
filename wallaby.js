@@ -1,30 +1,29 @@
 module.exports = function(wallaby) {
     return {
-        files: ["src/**/*.js", "!src/**/__mocks__/*.js", "!src/**/*.test.js"],
+        files: [
+            "src/**/*.+(js|jsx|json|snap|css|less|sass|scss|jpg|jpeg|gif|png|svg)",
+            "!src/__mocks/**/*.js?(x)",
+            "!src/**/*.test.js?(x)"
+        ],
 
-        tests: ["src/__mocks__/*.js", "src/**/*.test.js"],
+        tests: ["src/__mocks/**/*.js?(x)", "src/**/*.test.js?(x)"],
 
         env: {
             type: "node",
             runner: "node"
         },
 
-        testFramework: "jest",
-
         compilers: {
-            "**/*.js": wallaby.compilers.babel({ presets: ["react-app"] })
+            "**/*.js?(x)": wallaby.compilers.babel({})
         },
 
-        setup: function(wallaby) {
+        setup: (wallaby) => {
             const jestConfig = require("./package.json").jest;
-
-            Object.keys(jestConfig.transform || {}).forEach(
-                (k) =>
-                    ~k.indexOf("^.+\\.(js|jsx") &&
-                    void delete jestConfig.transform[k]
-            );
+            delete jestConfig.transform["^.+\\.(js|jsx)$"];
             delete jestConfig.testEnvironment;
             wallaby.testFramework.configure(jestConfig);
-        }
+        },
+
+        testFramework: "jest"
     };
 };
