@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile renders correctly 1`] = `
+<styled.div>
+  <styled.h1 />
+  <UserSearch
+    isSubmitting={false}
+    onChange={[Function]}
+    onSubmit={[Function]}
+    value=""
+  />
+</styled.div>
+`;

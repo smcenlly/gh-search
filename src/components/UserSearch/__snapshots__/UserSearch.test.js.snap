@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserSearch renders correctly 1`] = `
+<styled.form
+  onSubmit={[Function]}
+>
+  <styled.div>
+    <styled.img />
+    <styled.label />
+  </styled.div>
+  <styled.div>
+    <styled.input
+      id="UserSearch"
+      value=""
+    />
+  </styled.div>
+  <styled.div>
+    <styled.button
+      disabled={true}
+      type="submit"
+    />
+  </styled.div>
+</styled.form>
+`;

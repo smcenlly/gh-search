@@ -1,0 +1,17 @@
+{
+  "translation": {
+    "userSearch.label": "Username:",
+    "userSearch.error": "There was an error, please try again",
+    "userSearch.submit": "Retrieve",
+    "profile.title": "Github Search",
+    "repos.notFound": "Repos not found",
+    "repo.title" : "{{-fullName}} contributors:",
+    "contributors.noContributors": "No contributors for this repo",
+    "contributor.contributions": "{{-login}} ( {{count}} commit)",
+    "contributor.contributions_plural": "{{-login}} ( {{count}} commits)",
+    "paginate.first": "First",
+    "paginate.last": "Last",
+    "paginate.prev": "Prev",
+    "paginate.next": "Next"
+  }
+}
